@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt - YuCore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="site-body">
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">YuCore</a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#links">Links</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="section product-section">
+            <div class="product-layout">
+
+                <div class="product-gallery">
+                    <div class="product-main-image-wrap">
+                        <img id="mainImage" class="product-main-image" src="" alt="Produktbild">
+                    </div>
+
+                    <div id="thumbContainer" class="product-thumbs"></div>
+                </div>
+
+                <div class="product-info-card">
+                    <p class="section-kicker">YuCore Shop</p>
+                    <h1 id="title">Produkt</h1>
+                    <p id="price" class="product-price">CHF 0.00</p>
+
+                    <div class="product-meta">
+                        <span class="meta-pill">Ausverkauft</span>
+                        <span class="meta-pill">Creator Merch Style</span>
+                    </div>
+
+                    <p id="desc" class="product-desc"></p>
+
+                    <div class="product-details">
+                        <h3>Produktdetails</h3>
+                        <ul id="detailsList">
+                            <li>Hochwertige Produktpräsentation</li>
+                        </ul>
+                    </div>
+
+                    <button class="soldout-btn">Ausverkauft</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>YuCore</h3>
+                <p>Inspired by ZecoreTheFallen & Yukitsune_VT</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
+                <a href="#">Kontakt</a>
+                <a href="shop.html">Shop</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const data = {
+            puzzle: {
+                title: "500 Teile Puzzle",
+                price: "CHF 19.90",
+                desc: "Wolltest du schon immer ein Bild mit zwei Absolut Hotten Anime Characters an deine Wand hängen? Jetzt kannst du das in dem du zuerst 500 Teile zusammen legst und dir dann noch einen extra Ramen bei Ikea kaufst.",
+                details: [
+                    "500 Teile",
+                    "3 Produktbilder",
+                    "Nicht Essbar",
+                    "YuCore Shop Collection"
+                ],
+                images: [
+                    "Assets/puzzle1.jpg",
+                    "Assets/puzzle2.jpg",
+                    "Assets/puzzle3.jpg"
+                ]
+            },
+            cookie: {
+                title: "Keks",
+                price: "CHF 2.50",
+                desc: "Wollte den Keks ja gerne verkaufen aber habe im beim erstellen der Website gegessen. Sorry guys.",
+                details: [
+                    "2 Produktbilder",
+                    "Meme-Essbar",
+                    "Budget Friendly",
+                    "YuCore Shop Collection"
+                ],
+                images: [
+                    "Assets/cookie1.jpg",
+                    "Assets/cookie2.jpg"
+                ]
+            },
+            sayo: {
+                title: "SayoDevice",
+                price: "CHF 299.00",
+                desc: "Das Ding bekommst du auch für 30$ auf Amazon also wenn du es hier kaufst.. ah ja stimmt ist ja Ausverkauft. Nvm then.",
+                details: [
+                    "3 Produktbilder",
+                    "Premium Item",
+                    "Überteuert",
+                    "YuCore Shop Collection"
+                ],
+                images: [
+                    "Assets/sayo1.jpg",
+                    "Assets/sayo2.jpg",
+                    "Assets/sayo3.jpg"
+                ]
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const item = params.get("item") || "puzzle";
+        const product = data[item] || data.puzzle;
+
+        const title = document.getElementById("title");
+        const price = document.getElementById("price");
+        const desc = document.getElementById("desc");
+        const mainImage = document.getElementById("mainImage");
+        const thumbContainer = document.getElementById("thumbContainer");
+        const detailsList = document.getElementById("detailsList");
+
+        title.textContent = product.title;
+        price.textContent = product.price;
+        desc.textContent = product.desc;
+        mainImage.src = product.images[0];
+        mainImage.alt = product.title;
+
+        product.images.forEach((imgSrc, index) => {
+            const thumb = document.createElement("img");
+            thumb.src = imgSrc;
+            thumb.alt = product.title + " Bild " + (index + 1);
+            thumb.classList.add("product-thumb");
+
+            if (index === 0) {
+                thumb.classList.add("active");
+            }
+
+            thumb.addEventListener("click", () => {
+                mainImage.src = imgSrc;
+
+                document.querySelectorAll(".product-thumb").forEach(img => {
+                    img.classList.remove("active");
+                });
+
+                thumb.classList.add("active");
+            });
+
+            thumbContainer.appendChild(thumb);
+        });
+
+        detailsList.innerHTML = "";
+        product.details.forEach(detail => {
+            const li = document.createElement("li");
+            li.textContent = detail;
+            detailsList.appendChild(li);
+        });
+    </script>
+
+</body>
+</html>
