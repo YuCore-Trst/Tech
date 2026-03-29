@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YuCore</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .cookie-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #111;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            z-index: 9999;
+        }
+
+        .cookie-content {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .cookie-popup button {
+            background: #7c3aed;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body class="site-body">
 
@@ -61,8 +91,7 @@
                 <h2>Eine Seite für Community, Style und Content</h2>
                 <p>
                     YuCore ist keine klassische Firmenwebsite, sondern eine Fan- und Community-inspirierte
-                    Seite im Stil von ZecoreTheFallen und Yukitsune_VT. Der Fokus liegt auf Atmosphäre,
-                    Charakter, Shop und einem Design, das mehr nach Creator-Brand aussieht als nach random Business-Seite.
+                    Seite im Stil von ZecoreTheFallen und Yukitsune_VT.
                 </p>
             </div>
         </section>
@@ -77,58 +106,23 @@
                 <article class="feature-card">
                     <div class="feature-icon">🛒</div>
                     <h3>Shop</h3>
-                    <p>
-                        Kleine Auswahl an funny und stylischen Items mit eigener Produktansicht,
-                        Bildern und Details.
-                    </p>
+                    <p>Stylische Items mit eigener Produktansicht.</p>
                     <a href="shop.html" class="text-link">Zum Shop →</a>
                 </article>
 
                 <article class="feature-card">
                     <div class="feature-icon">🎥</div>
                     <h3>Content</h3>
-                    <p>
-                        Streams, Clips, Highlights und Momente, die die Community zusammenhalten
-                        und den ganzen Style ausmachen.
-                    </p>
+                    <p>Streams, Clips und Highlights.</p>
                     <a href="#highlights" class="text-link">Zu den Highlights →</a>
                 </article>
 
                 <article class="feature-card">
                     <div class="feature-icon">💜</div>
                     <h3>Community</h3>
-                    <p>
-                        Ein Ort für Leute, die den Vibe feiern, mitfiebern und einfach Teil von
-                        etwas Eigenem sein wollen.
-                    </p>
+                    <p>Ein Ort für den Vibe :)</p>
                     <a href="#community-links" class="text-link">Zu den Links →</a>
                 </article>
-            </div>
-        </section>
-
-        <section class="section split-section">
-            <div class="split-text">
-                <p class="section-kicker">Style</p>
-                <h2>Dark, clean und ein bisschen chaotic</h2>
-                <p>
-                    Das Design ist bewusst dunkel gehalten, mit modernen Karten, weichen Kanten
-                    und einer Mischung aus cleaner Struktur und etwas mehr Personality.
-                </p>
-                <p>
-                    Statt einer leeren Startseite gibt es jetzt mehrere Bereiche, klare Navigation,
-                    klickbare Inhalte und eine richtige Basis, auf der man weiterbauen kann.
-                </p>
-            </div>
-
-            <div class="split-panel">
-                <div class="mini-panel">
-                    <h3>Visual Identity</h3>
-                    <p>Banner, Cards, Buttons und Footer im einheitlichen Look.</p>
-                </div>
-                <div class="mini-panel">
-                    <h3>Fanpage Feeling</h3>
-                    <p>Mehr Creator- / VTuber-Vibe statt Tech-Unternehmen.</p>
-                </div>
             </div>
         </section>
 
@@ -141,25 +135,21 @@
             <div class="link-box-grid" id="community-links">
                 <div class="link-box">
                     <h3>Shop</h3>
-                    <p>Alle Produkte mit Produktdetail-Seiten und Bildern anschauen.</p>
                     <a href="shop.html" class="text-link">Shop öffnen →</a>
                 </div>
 
                 <div class="link-box">
                     <h3>Community Hub</h3>
-                    <p>Infos, News, kleine Updates und Space für weitere Seiten später.</p>
                     <a href="#about" class="text-link">Mehr lesen →</a>
                 </div>
 
                 <div class="link-box">
                     <h3>Creator Links</h3>
-                    <p>Twitch, YouTube, TikTok oder Discord könntest du hier später direkt verlinken.</p>
                     <a href="#creator-links" class="text-link">Links ansehen →</a>
                 </div>
 
                 <div class="link-box" id="highlights">
                     <h3>Highlights</h3>
-                    <p>Best-of Clips, funny Moments und ikonische Community-Augenblicke.</p>
                     <a href="#highlights-grid" class="text-link">Highlights ansehen →</a>
                 </div>
             </div>
@@ -167,64 +157,19 @@
 
         <section class="section" id="creator-links">
             <div class="section-header">
-                <p class="section-kicker">Creator Links</p>
                 <h2>Schnelle Zugänge</h2>
             </div>
 
             <div class="link-box-grid">
                 <div class="link-box">
                     <h3>ZecoreTheFallen</h3>
-                    <p>Platz für Twitch, YouTube, TikTok oder Discord von Zecore.</p>
                     <a href="https://www.twitch.tv/zecorethefallen" class="text-link">Profil öffnen →</a>
                 </div>
 
                 <div class="link-box">
                     <h3>Yukitsune_VT</h3>
-                    <p>Platz für Twitch, YouTube, TikTok oder Discord von Yuki.</p>
                     <a href="https://www.twitch.tv/yukitsune_vt" class="text-link">Profil öffnen →</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="section" id="highlights-grid">
-            <div class="section-header">
-                <p class="section-kicker">Highlights</p>
-                <h2>Beliebte Momente</h2>
-            </div>
-
-            <div class="feature-grid">
-                <article class="feature-card">
-                    <div class="feature-icon">🔥</div>
-                    <h3>Best Moments</h3>
-                    <p>Legendäre Streams, chaotische Szenen und dumme Insider, die man nie vergisst.</p>
-                    <a href="https://www.twitch.tv/yukitsune_vt/videos?filter=highlights&sort=time" class="text-link">Mehr ansehen →</a>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-icon">🎬</div>
-                    <h3>Clip Archive</h3>
-                    <p>Ein Bereich für kurze Highlights, Memes und Community-Favoriten.</p>
-                    <a href="https://www.twitch.tv/yukitsune_vt/videos?featured=true&filter=clips&range=all" class="text-link">Clips öffnen →</a>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3>Fan Favorites</h3>
-                    <p>Momente, die besonders oft geteilt, zitiert oder gefeiert werden.</p>
-                    <a href="https://www.twitch.tv/zecorethefallen/videos?featured=true&filter=clips&range=all" class="text-link">Favoriten ansehen →</a>
-                </article>
-            </div>
-        </section>
-
-        <section class="section cta-section">
-            <div class="cta-card">
-                <p class="section-kicker">Ready?</p>
-                <h2>Dann schau dir den Shop an</h2>
-                <p>
-                    Puzzle, Keks und SayoDevice warten schon. Auch wenn alles ausverkauft ist,
-                    sieht’s wenigstens cool aus :)
-                </p>
-                <a href="shop.html" class="btn btn-primary">Zum Shop</a>
             </div>
         </section>
 
@@ -234,17 +179,36 @@
         <div class="footer-inner">
             <div class="footer-brand">
                 <h3>YuCore</h3>
-                <p>Inspired by ZecoreTheFallen & Yukitsune_VT</p>
             </div>
 
             <div class="footer-links">
                 <a href="#">Impressum</a>
                 <a href="#">Datenschutz</a>
                 <a href="#">Kontakt</a>
-                <a href="shop.html">Shop</a>
             </div>
         </div>
     </footer>
+
+    <!-- COOKIE POPUP -->
+    <div id="cookie-popup" class="cookie-popup">
+        <div class="cookie-content">
+            <p>Trust Us! With your Cookies.</p>
+            <button onclick="acceptCookies()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            localStorage.setItem("cookiesAccepted", "true");
+            document.getElementById("cookie-popup").style.display = "none";
+        }
+
+        window.onload = function() {
+            if (localStorage.getItem("cookiesAccepted")) {
+                document.getElementById("cookie-popup").style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
